@@ -1,0 +1,36 @@
+import React from 'react';
+import "./header.css";
+import SearchIcon from '@material-ui/icons/Search';
+import HeaderOption from './HeaderOption';
+import HomeIcon from "@material-ui/icons/Home";
+import {SupervisorAccount} from '@material-ui/icons';
+import BusinessCenterIcon from "@material-ui/icons/BusinessCenter";
+import ChatIcon from "@material-ui/icons/Chat";
+import NotificationsIcon from "@material-ui/icons/Notifications";
+
+function Header() {
+    return (
+        <div className="header">
+            <div className="header__left">
+                <img src="https://www.flaticon.com/svg/static/icons/svg/174/174857.svg" alt="" />
+                <div className="header__search">
+                    {/* Search icon */}
+                    <SearchIcon/>
+                    <input type="text" />
+                </div>
+            </div>
+            <div className="header__right">
+                <HeaderOption Icon={HomeIcon} title="Home"/>
+                <HeaderOption Icon={SupervisorAccount} title="My Network" />
+                <HeaderOption Icon={BusinessCenterIcon} title="My Network" />
+                <HeaderOption Icon={ChatIcon} title="Messaging" />
+                <HeaderOption Icon={NotificationsIcon} title="Notifications" />
+                <HeaderOption avatar="https://www.nj.com/resizer/h8MrN0-Nw5dB5FOmMVGMmfVKFJo=/450x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/SJGKVE5UNVESVCW7BBOHKQCZVE.jpg" title="me" />
+            </div>
+        </div>
+    )
+}
+
+export default Header
+
+
