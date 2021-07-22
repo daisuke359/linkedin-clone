@@ -8,10 +8,11 @@ import InputOption from '../feed/InputOption';
 import "./post.css";
 
 function Post({name, description, message, photoUrl}) {
+
     return (
         <div className="post">
             <div className="post__header">
-                <Avatar />
+                <Avatar src={photoUrl} >{description[0]}</Avatar>
                 <div className="post__info">
                     <h2>{name}</h2>
                     <p>{description}</p>

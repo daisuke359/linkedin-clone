@@ -9,8 +9,12 @@ import CalendarViewDayIcon from "@material-ui/icons/CalendarViewDay";
 import Post from '../post/Post';
 import { db } from '../../firebase/firebase';
 import firebase from "firebase";
+import { useSelector } from 'react-redux';
+import { selectUser } from '../../features/userSlice';
 
 function Feed() {
+
+    const user = useSelector(selectUser);
 
     const [input, setInput] = useState("");
     const [posts, setPosts] = useState([]);
@@ -30,10 +34,10 @@ function Feed() {
         e.preventDefault();
 
         db.collection("posts").add({
-            name: "Daisuke Kawabuchi",
-            description: "this is a test",
+            name: user.displayName,
+            description: user.email,
             message: input,
-            photoUrl: "",
+            photoUrl: user.photoURL || "",
             timestamp: firebase.firestore.FieldValue.serverTimestamp()
         })
 
