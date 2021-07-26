@@ -8,6 +8,7 @@ import Sidebar from './components/sidebar/Sidebar';
 import Widgets from './components/widgets/Widgets';
 import { login, logout, selectUser } from './features/userSlice';
 import { auth } from './firebase/firebase';
+import "./responsive.css";
 
 function App() {
 
