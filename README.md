@@ -1,6 +1,6 @@
 # Linkedin Clone
 
-This is a social media app using React, redux, and firebase.
+This is a social media app using React, redux and firebase.
 
 ## Website
 
